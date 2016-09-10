@@ -39,7 +39,7 @@ busLines.forEach(lineNumber => {
 
   const stops = busFuture.wait()
 
-  if(!stops.coming || !stops.going) return console.warn(`No stops for ${lineNumber}`)
+  if(!stops.coming || !stops.going) return console.info(`No stops for ${lineNumber}`)
   BusLines.insert({
     lineNumber,
     stopsComing: stops.coming.map(geocodeStop),
@@ -51,7 +51,7 @@ function geocodeStop(stop){
   console.log(`Geocoding ${stop.address}`)
   const geocodedInfo = geocodeSync(`${stop.address}, Pouso Alegre, Minas Gerais`)
 
-  if(!geocodedInfo) return console.warn(`Couldn't geocode ${stop.address}`)
+  if(!geocodedInfo) return console.info(`Couldn't geocode ${stop.address}`)
   
 
   return {
