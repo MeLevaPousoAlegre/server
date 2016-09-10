@@ -7,6 +7,7 @@
   "dependencies": {
     "fibers": "^1.0.14",
     "meteor-node-stubs": "~0.2.0",
-    "node-geocoder": "^3.14.0"
+    "node-geocoder": "^3.14.0",
+    "princesa-do-sul-api": "^1.0.0"
   }
 }

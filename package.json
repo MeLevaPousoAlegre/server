@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "start": "cd app && meteor run",
-    "deploy:production": "DEBUG=* mup --settings=./config/production/settings.json --config=mup.js"
+    "deploy:production": "DEBUG=* mup deploy --settings=./config/production/settings.json --config=mup.js"
   },
   "keywords": [],
   "author": "Gabriel Rubens"
