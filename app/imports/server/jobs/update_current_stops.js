@@ -21,6 +21,8 @@ SyncedCron.add({
 
       if(!currentStops) return console.warn(`No current stops could be fetched for ${busLine.lineNumber}`)
 
+      if(currentStops.coming.stopDescription === 'ENTRE PONTOS') return 
+
       BusLineCurrentStops.upsert({
         lineNumber: busLine.lineNumber,
       }, {
